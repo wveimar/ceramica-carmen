@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
       <header>
         <NavBar />
       </header>
-      <main style={{ paddingTop: ""}} >{children}</main>  
+      <main style={{ marginTop: "10rem"}} >{children}</main>  
     </div>
   );
 };

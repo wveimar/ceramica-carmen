@@ -19,9 +19,11 @@ function SimplePage({ code }) {
   }
   const [page] = data.simplePageCollection.items;
 
+  console.log(code);
+  
   return (
     <div>
-      <img width={500} src={page && page.image.url}></img>
+      {/* <img width={500} src={page && page.image.url}></img> */}
       <p
         style={{
           textAlign: "justify",
@@ -43,9 +45,6 @@ const SIMPLE_PAGE_QUERY = gql`
         code
         name
         description
-        image {
-          url
-        }
       }
     }
   }
