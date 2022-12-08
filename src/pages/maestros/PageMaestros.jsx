@@ -1,5 +1,9 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
+import Image from "../../components/image/Image";
+import PageSection from "../../components/page-section/PageSection";
+import GridPosts from "../../components/grid-posts/GridPosts";
+
 
 const PageMaestros = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_MAESTROS_QUERY, {
@@ -14,10 +18,15 @@ const PageMaestros = ({ pageCode }) => {
   if (!data) {
     return <p>No Data!</p>;
   }
+  const [image] = data.simplePageCollection.items;
+  console.log(data);
 
-  console.log(data)
-
-  return <div>maestros</div>;
+  return <div>
+    <Image description={image.description} url={image.image.url} />
+    <PageSection sectionCode="s1" code={pageCode}>
+    <GridPosts variant="simple-post" code={`${pageCode}-s2`} />
+        </PageSection>
+    </div>;
 };
 
 export default PageMaestros;
@@ -28,6 +37,9 @@ const PAGE_MAESTROS_QUERY = gql`
       items {
         name
         description
+        image {
+          url
+        }
       }
     }
   }

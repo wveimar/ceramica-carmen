@@ -1,0 +1,14 @@
+.post {
+  margin: 15px;
+}
+
+.post img {
+  height: 450px;
+}
+
+@media (max-width: 500px) {
+  .post img {
+    padding: 5px;
+    height: 350px;
+  }
+}
