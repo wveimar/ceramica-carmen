@@ -9,7 +9,6 @@ const Page = ({ pageCode }) => {
   // console.log(search, code);
   return (
     <div>
-      <h1 >PAGES</h1>
       <SimplePage code={code ? code : pageCode} />
     </div>
   );

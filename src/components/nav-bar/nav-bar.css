@@ -7,13 +7,12 @@
     align-items: center;
     background-color: white;
     width: 95%;
+    z-index: 10;
 }
 
 .Navbar > .nav-logo {
-    margin: 15px;
-    height: 65px;
-    width: 65px;
-    padding-top: 5px;
+    margin: 5px;
+    padding: 5px;
 }
 
 .Navbar > .nav-items {
