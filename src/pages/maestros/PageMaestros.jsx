@@ -3,6 +3,7 @@ import { gql, useQuery } from "@apollo/client";
 import Image from "../../components/image/Image";
 import PageSection from "../../components/page-section/PageSection";
 import GridPosts from "../../components/grid-posts/GridPosts";
+import GridCards from "../../components/grid-cards/GridCards";
 
 
 const PageMaestros = ({ pageCode }) => {
@@ -23,9 +24,10 @@ const PageMaestros = ({ pageCode }) => {
 
   return <div>
     <Image description={image.description} url={image.image.url} />
+
     <PageSection sectionCode="s1" code={pageCode}>
-    <GridPosts variant="simple-post" code={`${pageCode}-s2`} />
-        </PageSection>
+    <GridCards variant="card-link" code={`${pageCode}-s1`} />
+    </PageSection>
     </div>;
 };
 
