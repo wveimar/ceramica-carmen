@@ -4,23 +4,25 @@
   margin: 15px;
   border-radius: 10px;
   cursor: pointer;
+  text-align: center;
 }
+
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
 .card-container {
-  padding: 2px 16px;
+  padding: 2px;
 }
 
-.card img{
+.card img {
   padding: 10px;
   height: 350px;
 }
 
 @media (max-width: 700px) {
-  .card img{
+  .card img {
     padding: 10px;
     height: 250px;
   }

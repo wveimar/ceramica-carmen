@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  align-items: center;
+}
+
+.description {
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: grid;
+    justify-content: space-around;
+  }
+  .container div {
+    width: 100%;
+  }
+}

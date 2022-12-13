@@ -4,6 +4,7 @@
 
 .post img {
   height: 450px;
+  margin-bottom: 2rem;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 

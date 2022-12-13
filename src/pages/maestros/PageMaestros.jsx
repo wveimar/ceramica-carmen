@@ -5,7 +5,6 @@ import PageSection from "../../components/page-section/PageSection";
 import GridPosts from "../../components/grid-posts/GridPosts";
 import GridCards from "../../components/grid-cards/GridCards";
 
-
 const PageMaestros = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_MAESTROS_QUERY, {
     variables: {
@@ -22,13 +21,14 @@ const PageMaestros = ({ pageCode }) => {
   const [image] = data.simplePageCollection.items;
   console.log(data);
 
-  return <div>
-    <Image description={image.description} url={image.image.url} />
-
-    <PageSection sectionCode="s1" code={pageCode}>
-    <GridCards variant="card-link" code={`${pageCode}-s1`} />
-    </PageSection>
-    </div>;
+  return (
+    <div>
+      <Image description={image.description} url={image.image.url} />
+      <PageSection sectionCode="s1" code={pageCode}>
+        <GridCards variant="card-link" code={`${pageCode}-s1`} />
+      </PageSection>
+    </div>
+  );
 };
 
 export default PageMaestros;

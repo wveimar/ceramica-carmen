@@ -24,7 +24,7 @@ function SimplePage({ code }) {
   return (
     <div className="div">
       <img width="100%" height="400px" src={page && page.image.url}></img>
-      <h2>{page && page.name}</h2>
+      <h2>{page && page.title}</h2>
       <p
         style={{
           textAlign: "justify",
@@ -45,6 +45,7 @@ const SIMPLE_PAGE_QUERY = gql`
       items {
         code
         name
+        title
         description
         image {
           url
