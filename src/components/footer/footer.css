@@ -3,6 +3,8 @@
   justify-content: center;
   margin-top: 4rem;
   align-items: center;
+  background-color: rgb(190, 250, 183);
+  margin-bottom: -70px;
 }
 
 .description {

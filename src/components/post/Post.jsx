@@ -1,13 +1,22 @@
 import React from "react";
 import "./post.css";
 
-const Post = ({ title, variant, description, imageUrl, isDescriptionHtml }) => {
+const Post = ({ title, variant, images, description, imageUrl, isDescriptionHtml }) => {
   let postTemplate = <></>;
   switch (variant) {
     case "simple-post":
       postTemplate = (
         <div className="post" style={{ margin: "10%", textAlign: "justify" }}>
-          <img src={imageUrl} alt="image" className="img" />
+          <div className="images">
+            {images.map((itemImage, index) => (
+              <img
+                key={index}
+                src={itemImage.url}
+                alt="image"
+                className="img"
+              />
+            ))}
+          </div>
           <div className="post-container">
             {!isDescriptionHtml ? (
               <p>{description}</p>

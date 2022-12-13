@@ -27,6 +27,7 @@ const PostDetail = () => {
       <Post
         title={post?.title}
         imageUrl={post.mainPicture?.url}
+        images={post.imagesCollection.items}
         description={post.description}
         isDescriptionHtml={post.isDescriptionHtml}
         variant={variant ? variant : "simple-post"}
@@ -47,6 +48,11 @@ const SIMPLE_POST_QUERY = gql`
         isDescriptionHtml
         mainPicture {
           url
+        }
+        imagesCollection {
+          items {
+            url
+          }
         }
       }
     }
