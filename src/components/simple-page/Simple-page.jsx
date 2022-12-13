@@ -1,5 +1,6 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
+import GalleryFrontPage from "../galleryFrontPage/GalleryFrontPage";
 
 function SimplePage({ code }) {
   if (!code) {
@@ -19,11 +20,17 @@ function SimplePage({ code }) {
   }
   const [page] = data.simplePageCollection.items;
 
-  console.log(code);
-  
+  console.log(page);
+
   return (
     <div className="div">
-      <img width="100%" height="400px" src={page && page.image.url}></img>
+      {/* {page.hidenGallery === false ? (
+        <GalleryFrontPage DataImages={page.imagesCollection.items} />
+      ) : (
+        <img width="100%" height="400px" src={page && page.image.url}></img>
+      )} */}
+      <GalleryFrontPage DataImages={page.imagesCollection.items} />
+
       <h2>{page && page.title}</h2>
       <p
         style={{
@@ -50,6 +57,12 @@ const SIMPLE_PAGE_QUERY = gql`
         image {
           url
         }
+        imagesCollection {
+          items {
+            url
+          }
+        }
+        hidenGallery
       }
     }
   }

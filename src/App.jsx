@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/common/Layout";
+import PageElCarmen from "./pages/elcarmen/PageElCarmen";
 import PageMaestros from "./pages/maestros/PageMaestros";
 import PageNoticias from "./pages/noticias/PageNoticias";
 import Page from "./pages/page/Page";
@@ -17,6 +18,10 @@ function App() {
         <Route
           path={`/${PAGE_CODES.MAESTROS}`}
           element={<PageMaestros pageCode={PAGE_CODES.MAESTROS} />}
+        />
+        <Route 
+          path={`/${PAGE_CODES.EL_CARMEN_DE_VIBORAL}`}
+          element={<PageElCarmen pageCode={PAGE_CODES.EL_CARMEN_DE_VIBORAL} />}
         />
          <Route
           path={`/${PAGE_CODES.NOTICIAS}`}
