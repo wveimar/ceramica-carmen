@@ -1,11 +1,12 @@
 #root {
   text-align: center;
+  --background:rgb(203, 206, 146);
 }
 body {
-  background: #70d270; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f3efef55, #a2dea276),
+  background: #faf9ec; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f2eebc55, #f3f4ed76),
     url(""); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #e4c6c672, #7ed07e74),
+  background: linear-gradient(to right, #f8f9eb72, #f3f3f174),
     url(""); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin: 0;
   padding: 0;

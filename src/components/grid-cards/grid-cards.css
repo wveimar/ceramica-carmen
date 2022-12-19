@@ -1,7 +1,9 @@
 .grid-container {
   display: grid;
+  gap: 1rem;
   width: 100%;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
 }
 
 @media (max-width: 700px) {
