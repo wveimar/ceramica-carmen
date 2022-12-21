@@ -1,6 +1,6 @@
 #root {
   text-align: center;
-  --background:rgb(203, 206, 146);
+  --background: #E5BE01;
 }
 body {
   background: #faf9ec; /* fallback for old browsers */

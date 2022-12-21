@@ -14,7 +14,7 @@ const Card = ({ code, variant, imageUrl, name, shortDescription }) => {
             <h4>
               <b>{name}</b>
             </h4>
-            <p>{shortDescription}</p>
+            <p style={{textAlign: "center"}}>{shortDescription}</p>
           </div>
         </a>
       );

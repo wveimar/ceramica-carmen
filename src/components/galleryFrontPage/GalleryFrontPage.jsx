@@ -18,7 +18,7 @@ const GalleryFrontPage = ({ DataImages }) => {
       data={dataImage}
       time={9000}
       width="100vw"
-      height="100vh"
+      height="70vh"
       captionStyle={captionStyle}
       radius="20px"
       captionPosition="bottom"

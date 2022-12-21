@@ -1,12 +1,12 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
-import GridCards from "../../components/grid-cards/GridCards";
-import Image from "../../components/image/Image";
+import Gallery from "../../components/gallery/Gallery";
+import GalleryFrontPage from "../../components/galleryFrontPage/GalleryFrontPage";
 import Loader from "../../components/loader/Loader";
 import PageSection from "../../components/page-section/PageSection";
 
-const PageElCarmen = ({ pageCode }) => {
-  const { error, data } = useQuery(PAGE_EL_CARMEN_QUERY, {
+const PageGallery = ({ pageCode }) => {
+  const { error, data } = useQuery(PAGE_GALLERY_QUERY, {
     variables: {
       where: { code_contains: pageCode },
     },
@@ -18,22 +18,23 @@ const PageElCarmen = ({ pageCode }) => {
   if (!data) {
     return <Loader />
   }
-  const [image] = data.simplePageCollection.items;
-  console.log(data);
+  const [page] = data.simplePageCollection.items;
+
+  console.log(page);
 
   return (
     <div style={{ marginTop: "4rem" }}>
-      <Image description={image.description} url={image.image.url} />
+      <GalleryFrontPage DataImages={page.imagesCollection.items} />
       <PageSection sectionCode="s1" code={`${pageCode}`}>
-        <GridCards variant="card-link" code={`${pageCode}-s1`} />
+        <Gallery code={`gallery-${pageCode}`} />
       </PageSection>
     </div>
   );
 };
 
-export default PageElCarmen;
+export default PageGallery;
 
-const PAGE_EL_CARMEN_QUERY = gql`
+const PAGE_GALLERY_QUERY = gql`
   query simplePageCollection($where: SimplePageFilter) {
     simplePageCollection(where: $where) {
       items {
@@ -42,6 +43,12 @@ const PAGE_EL_CARMEN_QUERY = gql`
         image {
           url
         }
+        imagesCollection {
+          items {
+            url
+          }
+        }
+        hidenGallery
       }
     }
   }

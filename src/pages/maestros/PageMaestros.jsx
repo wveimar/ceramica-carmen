@@ -4,6 +4,7 @@ import Image from "../../components/image/Image";
 import PageSection from "../../components/page-section/PageSection";
 import GridPosts from "../../components/grid-posts/GridPosts";
 import GridCards from "../../components/grid-cards/GridCards";
+import Loader from "../../components/loader/Loader";
 
 const PageMaestros = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_MAESTROS_QUERY, {
@@ -16,7 +17,7 @@ const PageMaestros = ({ pageCode }) => {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
   if (!data) {
-    return <p>No Data!</p>;
+    return <Loader />;
   }
   const [image] = data.simplePageCollection.items;
   console.log(data);

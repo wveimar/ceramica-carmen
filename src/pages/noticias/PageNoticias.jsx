@@ -3,6 +3,7 @@ import { gql, useQuery } from "@apollo/client";
 import Image from "../../components/image/Image";
 import PageSection from "../../components/page-section/PageSection";
 import GridCards from "../../components/grid-cards/GridCards";
+import Loader from "../../components/loader/Loader";
 
 const PageNoticias = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_NOTICIAS_QUERY, {
@@ -15,7 +16,7 @@ const PageNoticias = ({ pageCode }) => {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
   if (!data) {
-    return <p>No Data!</p>;
+    return <Loader />;
   }
   const [image] = data.simplePageCollection.items;
 

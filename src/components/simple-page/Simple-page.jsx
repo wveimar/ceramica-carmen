@@ -1,10 +1,11 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
 import GalleryFrontPage from "../galleryFrontPage/GalleryFrontPage";
+import Loader from "../loader/Loader";
 
 function SimplePage({ code }) {
   if (!code) {
-    return <p>No Code!</p>;
+    return <Loader />;
   }
   const { error, data } = useQuery(SIMPLE_PAGE_QUERY, {
     variables: {
@@ -16,7 +17,7 @@ function SimplePage({ code }) {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
   if (!data) {
-    return <p>No Data!</p>;
+    return <Loader />;
   }
   const [page] = data.simplePageCollection.items;
 
@@ -24,13 +25,11 @@ function SimplePage({ code }) {
 
   return (
     <div className="div">
-      {/* {page.hidenGallery === false ? (
-        <GalleryFrontPage DataImages={page.imagesCollection.items} />
+      {page.hidenGallery ? (
+        <img width="100%" height="70vh" src={page && page.image.url}></img>
       ) : (
-        <img width="100%" height="400px" src={page && page.image.url}></img>
-      )} */}
-      <GalleryFrontPage DataImages={page.imagesCollection.items} />
-
+        <GalleryFrontPage DataImages={page.imagesCollection.items} />
+      )}
       <h2>{page && page.title}</h2>
       <p
         style={{

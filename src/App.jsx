@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/common/Layout";
 import PageElCarmen from "./pages/elcarmen/PageElCarmen";
+import PageGallery from "./pages/gallery/PageGallery";
 import PageMaestros from "./pages/maestros/PageMaestros";
 import PageNoticias from "./pages/noticias/PageNoticias";
 import Page from "./pages/page/Page";
@@ -26,6 +27,10 @@ function App() {
          <Route
           path={`/${PAGE_CODES.NOTICIAS}`}
           element={<PageNoticias pageCode={PAGE_CODES.NOTICIAS} />}
+        />
+        <Route
+          path={`/${PAGE_CODES.GALERIA}`}
+          element={<PageGallery pageCode={PAGE_CODES.GALERIA} />}
         />
       </Routes>
     </Layout>
