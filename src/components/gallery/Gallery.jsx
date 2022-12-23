@@ -1,5 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
+import Loader from "../loader/Loader";
 import CardGallery from "./CardGallery";
 import "./gallery.module.css";
 
@@ -10,11 +11,13 @@ const Gallery = ({ code }) => {
     },
   });
 
+  console.log(code)
+
   if (error && error.networkError) {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
   if (!data) {
-    return <p>No Data!</p>;
+    return <Loader />;
   }
 
   const [gallery] = data.galleryCollection.items;

@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import { useLocation } from "react-router-dom";
 import Post from "../../components/post/Post";
+import Loader from "../../components/loader/Loader";
 const PostDetail = () => {
   const search = useLocation().search;
   const code = new URLSearchParams(search).get("code");
@@ -19,7 +20,7 @@ const PostDetail = () => {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
   if (!data) {
-    return <p>No Data!</p>;
+    return <Loader />;
   }
   const [post] = data.simplePostCollection.items;
   return (

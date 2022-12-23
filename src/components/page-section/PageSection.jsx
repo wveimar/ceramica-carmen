@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import "./page-section.css";
+import Loader from "../loader/Loader";
 
 const PageSection = ({ sectionCode, code, children }) => {
   const { error, data } = useQuery(PAGE_SECTION_QUERY, {
@@ -13,7 +14,7 @@ const PageSection = ({ sectionCode, code, children }) => {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
   if (!data) {
-    return <p>No Data!</p>;
+    return <Loader />
   }
 
   console.log(data)

@@ -1,6 +1,7 @@
 import { useQuery, gql } from "@apollo/client";
 import React from "react";
 import Card from "../card/Card";
+import Loader from "../loader/Loader";
 import "./grid-cards.css";
 
 const GridCards = ({ code, variant }) => {
@@ -10,14 +11,13 @@ const GridCards = ({ code, variant }) => {
       order: "sort_ASC",
     },
   });
-  console.log(code);
 
   if (error && error.networkError) {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
 
   if (!data) {
-    return <p>No Data!</p>;
+    return <Loader/>;
   }
 
   const cards = data.simplePostCollection.items;

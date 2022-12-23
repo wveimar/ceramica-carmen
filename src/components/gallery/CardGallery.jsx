@@ -7,7 +7,7 @@ const CardGallery = ({ infoImage }) => {
   const { isShowing, toggle } = useModal();
   return (
     <>
-      <button onClick={toggle}>
+      <button onClick={toggle} style={{ cursor: "pointer" }}>
         <div className="card-gallery">
           <article id="3685" className="location-listing">
             <p className="location-title">{infoImage.description}</p>
