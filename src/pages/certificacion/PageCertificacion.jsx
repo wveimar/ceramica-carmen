@@ -5,7 +5,7 @@ import GalleryFrontPage from "../../components/galleryFrontPage/GalleryFrontPage
 import Loader from "../../components/loader/Loader";
 import PageSection from "../../components/page-section/PageSection";
 
-const PageGallery = ({ pageCode }) => {
+const PageCertificacion = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_CERTIFICACION_QUERY, {
     variables: {
       where: { code_contains: pageCode },
@@ -25,14 +25,14 @@ const PageGallery = ({ pageCode }) => {
   return (
     <div style={{ marginTop: "4rem" }}>
       <GalleryFrontPage DataImages={page.imagesCollection.items} />
-      {/* <PageSection sectionCode="s1" code={`${pageCode}`}>
-        <Gallery code={`certificacion-${pageCode}`} />
-      </PageSection> */}
+      <PageSection sectionCode="s1" code={`${pageCode}`}>
+        <Gallery code={`gallery-${pageCode}`} />
+      </PageSection>
     </div>
   );
 };
 
-export default PageGallery;
+export default PageCertificacion;
 
 const PAGE_CERTIFICACION_QUERY = gql`
   query simplePageCollection($where: SimplePageFilter) {

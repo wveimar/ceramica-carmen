@@ -3,5 +3,6 @@ export const PAGE_CODES = {
     MAESTROS: "maestros",
     EL_CARMEN_DE_VIBORAL: "el-carmen-de-viboral",
     NOTICIAS: "noticias",
-    GALERIA: "gallery"
+    GALERIA: "gallery",
+    CERTIFICACION:"certificacion"
 }

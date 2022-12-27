@@ -5,6 +5,7 @@ import PageElCarmen from "./pages/elcarmen/PageElCarmen";
 import PageGallery from "./pages/gallery/PageGallery";
 import PageMaestros from "./pages/maestros/PageMaestros";
 import PageNoticias from "./pages/noticias/PageNoticias";
+import PageCertificacion from "./pages/certificacion/PageCertificacion";
 import Page from "./pages/page/Page";
 import PostDetail from "./pages/post-detail/PostDetail";
 import { PAGE_CODES } from "./utils/page-codes";
@@ -31,6 +32,10 @@ function App() {
         <Route
           path={`/${PAGE_CODES.GALERIA}`}
           element={<PageGallery pageCode={PAGE_CODES.GALERIA} />}
+        />
+         <Route
+          path={`/${PAGE_CODES.CERTIFICACION}`}
+          element={<PageCertificacion pageCode={PAGE_CODES.CERTIFICACION} />}
         />
       </Routes>
     </Layout>
