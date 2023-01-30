@@ -16,8 +16,6 @@ const PageSection = ({ sectionCode, code, children }) => {
   if (!data) {
     return <Loader />
   }
-
-  console.log(data)
   const [pageSection] = data.pageSectionCollection.items;
   return (
     <section >

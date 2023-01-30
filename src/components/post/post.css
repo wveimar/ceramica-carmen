@@ -1,16 +1,18 @@
 .post {
-  margin: 5px;
+  padding: 1rem;
 }
 
 .images {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-items: stretch;
+  gap: 1rem;
 }
 
 .post img {
   height: 400px;
   margin-bottom: 2rem;
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
 }
 
 @media (max-width: 500px) {
@@ -18,4 +20,8 @@
     padding: 5px;
     height: 350px;
   }
+}
+
+p {
+  margin-bottom: 1px;
 }

@@ -5,8 +5,6 @@ import SimplePage from "../../components/simple-page/Simple-page";
 const Page = ({ pageCode }) => {
   const search = useLocation().search;
   const code = new URLSearchParams(search).get("code");  
-
-  // console.log(search, code);
   return (
     <div>
       <SimplePage code={code ? code : pageCode} />

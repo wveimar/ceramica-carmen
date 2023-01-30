@@ -18,6 +18,7 @@ const httpLink = createHttpLink({
   uri: `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
 });
 
+
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
   // return the headers to the context so httpLink can read them
