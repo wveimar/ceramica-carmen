@@ -1,9 +1,9 @@
 :root {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter var';
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
+  src: url('/fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -13,6 +13,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
 }
 
 a {

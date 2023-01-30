@@ -1,7 +1,13 @@
+@font-face {
+  font-family: "Bitstream Vera Serif Bold";
+  src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+}
 #root {
   text-align: center;
+  font-family: "Bitstream Vera Serif Bold", Courier, monospace;
   --background: #E5BE01;
 }
+
 body {
   background: #faf9ec; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #f2eebc55, #f3f4ed76),
