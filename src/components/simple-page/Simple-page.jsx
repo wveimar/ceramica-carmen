@@ -2,6 +2,7 @@ import React from "react";
 import { gql, useQuery } from "@apollo/client";
 import GalleryFrontPage from "../galleryFrontPage/GalleryFrontPage";
 import Loader from "../loader/Loader";
+import "./simple-page.css";
 
 function SimplePage({ code }) {
   if (!code) {
@@ -24,21 +25,16 @@ function SimplePage({ code }) {
   console.log(page);
 
   return (
-    <div className="div">
+    <div>
       {page.hidenGallery ? (
         <img width="100%" height="70vh" src={page && page.image.url}></img>
       ) : (
         <GalleryFrontPage DataImages={page.imagesCollection.items} />
       )}
       <h2>{page && page.title}</h2>
-      <p
-        style={{
-          textAlign: "justify",
-          margin: "3rem 3rem 3rem 3rem",
-        }}
-      >
-        {page && page.description}
-      </p>
+      <div>
+        <p className="text">{page && page.description}</p>
+      </div>
     </div>
   );
 }

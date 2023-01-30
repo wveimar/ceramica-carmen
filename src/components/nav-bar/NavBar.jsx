@@ -35,6 +35,7 @@ export default function NavBar() {
                   ? `/page?code=${item.menuPath}`
                   : item.menuPath
               }
+              onClick={() => setIsOpen(false)}
             >
               {item.name}
             </Link>

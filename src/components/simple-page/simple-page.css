@@ -1,0 +1,10 @@
+p {
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 1500px) {
+    .text {
+        margin-right: 15rem;
+        margin-left: 15rem;
+    }
+}
