@@ -31,8 +31,8 @@ function SimplePage({ code }) {
       ) : (
         <GalleryFrontPage DataImages={page.imagesCollection.items} />
       )}
-      <h2>{page && page.title}</h2>
-      <div>
+      <h2 style={{textAlign: "center"}}>{page && page.title}</h2>
+      <div style={{ margin: "4rem"}}>
         <p className="text">{page && page.description}</p>
       </div>
     </div>
