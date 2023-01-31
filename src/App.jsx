@@ -14,9 +14,6 @@ function App() {
   return (
 
     <Layout>
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet"/>
       <Routes>
         <Route path="/" exact element={<Page pageCode="home" />} />
         <Route path="/page" exact element={<Page />} />

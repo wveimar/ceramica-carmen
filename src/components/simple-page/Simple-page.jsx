@@ -21,9 +21,6 @@ function SimplePage({ code }) {
     return <Loader />;
   }
   const [page] = data.simplePageCollection.items;
-
-  console.log(page);
-
   return (
     <div>
       {page.hidenGallery ? (
