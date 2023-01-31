@@ -1,11 +1,11 @@
 .grid-container {
+  margin-top: 3rem;
   display: grid;
   gap: 1rem;
   width: 100%;
   grid-template-columns: repeat(auto-fit, 300px);
   justify-content: center;
 }
-
 @media (max-width: 700px) {
   .grid-container {
     display: grid;
