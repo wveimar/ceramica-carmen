@@ -22,6 +22,7 @@
   transform: scale(1.1);
   width: 100%; /* need to overwrite inline dimensions */
   height: 17rem;
+   object-fit: cover;
 }
 
 .location-title {

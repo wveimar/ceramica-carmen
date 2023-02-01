@@ -19,6 +19,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     outline: 0;
+    margin-top: 10%;
   }
   
   .modal {
@@ -27,7 +28,7 @@
     position: relative;
     margin: 1.75rem auto;
     border-radius: 3px;
-    max-width: 500px;
+    max-width: 50rem;
     padding: 2rem;
     text-align: center;
   }
